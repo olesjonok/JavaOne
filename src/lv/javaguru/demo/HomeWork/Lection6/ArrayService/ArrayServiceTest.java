@@ -5,11 +5,11 @@ import java.sql.SQLOutput;
 public class ArrayServiceTest {
     public static void main(String[] args) {
         ArrayServiceTest arrayServiceTest = new ArrayServiceTest();
-        arrayServiceTest.testOne();
-        arrayServiceTest.testTwo();
-//        arrayServiceTest.testThree();
-        arrayServiceTest.testFour();
-        arrayServiceTest.testFive();
+//        arrayServiceTest.testOne();
+//        arrayServiceTest.testTwo();
+        arrayServiceTest.testThree();
+//        arrayServiceTest.testFour();
+//        arrayServiceTest.testFive();
 
     }
 
@@ -52,6 +52,9 @@ public class ArrayServiceTest {
     }
 
     public void testThree() {
+        int[] array = { 1, 3, -7, 2, 8, 23, 21, 54, 4, 5 };
+        ArrayService arrayService = new ArrayService();
+        arrayService.printArray(array);
     }
 
     public void testFour() {

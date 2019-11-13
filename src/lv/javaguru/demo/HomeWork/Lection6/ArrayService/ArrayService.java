@@ -16,8 +16,8 @@ public class ArrayService {
     }
 
     public void printArray(int[] array) {
-        for (int number : array) {
-            System.out.println("Element = " + number);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
         }
     }
 
