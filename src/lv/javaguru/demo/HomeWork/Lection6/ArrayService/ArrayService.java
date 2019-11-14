@@ -17,7 +17,7 @@ public class ArrayService {
 
     public void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+//            System.out.print(array[i] + " ");
         }
     }
 
@@ -30,14 +30,10 @@ public class ArrayService {
     }
 
     public double avg(int[] array) {
-        int sum = 0;
+        double average = 0;
         for (int i = 0; i < array.length; i++) {
-            sum += array[i];
+            average += array[i];
         }
-        if (array.length == 0) {
-            return 0;
-        } else {
-            return sum / array.length;
-        }
+        return average /= array.length;
     }
 }

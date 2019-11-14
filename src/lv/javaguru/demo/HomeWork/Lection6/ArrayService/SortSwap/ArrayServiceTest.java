@@ -4,13 +4,11 @@ import java.util.Arrays;
 
 public class ArrayServiceTest {
     public static void main(String[] args) {
-
         ArrayServiceTest tests = new ArrayServiceTest();
         tests.test1sort();
         tests.test2sort();
         tests.test1swap();
         tests.test2swap();
-
     }
 
     public void test1sort() {
@@ -49,7 +47,6 @@ public class ArrayServiceTest {
         int[] actualResult = {4, 7, 2, 3, 8, 9, 5, 1, 6};
         ArrayService svc = new ArrayService();
         svc.swap(actualResult);
-//        System.out.println(Arrays.toString(actualResult));
         int[] expectedResult = {6, 1, 5, 9, 8, 3, 2, 7, 4};
 
         boolean areEqual = Arrays.equals(actualResult, expectedResult);
@@ -62,10 +59,8 @@ public class ArrayServiceTest {
 
     public void test2swap() {
         int[] actualResult = {1, 3, 8, 5, 4, 7, 9, 6, 2};
-//        System.out.println(Arrays.toString(actualResult));
         ArrayService svc = new ArrayService();
         svc.swap(actualResult);
-//        System.out.println(Arrays.toString(actualResult));
         int[] expectedResult = {2, 6, 9, 7, 4, 5, 8, 3, 1};
 
         boolean areEqual = Arrays.equals(actualResult, expectedResult);

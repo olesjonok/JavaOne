@@ -1,15 +1,16 @@
 package lv.javaguru.demo.HomeWork.Lection6.ArrayService;
 
 import java.sql.SQLOutput;
+import java.util.Arrays;
 
 public class ArrayServiceTest {
     public static void main(String[] args) {
         ArrayServiceTest arrayServiceTest = new ArrayServiceTest();
-//        arrayServiceTest.testOne();
-//        arrayServiceTest.testTwo();
+        arrayServiceTest.testOne();
+        arrayServiceTest.testTwo();
         arrayServiceTest.testThree();
-//        arrayServiceTest.testFour();
-//        arrayServiceTest.testFive();
+        arrayServiceTest.testFour();
+        arrayServiceTest.testFive();
 
     }
 
@@ -18,9 +19,7 @@ public class ArrayServiceTest {
         int[] newArray = arrayService.create(3);
         int length = newArray.length;
         int expectedResult = 3;
-
         check(length, expectedResult, "Test1");
-        // проверить , что заданная длина == длине массива
     }
 
     public void testTwo() {
@@ -42,19 +41,15 @@ public class ArrayServiceTest {
         }
     }
 
-    public void check(int actualResult, int expectedResult, String testName) {
-        if (actualResult == expectedResult) {
-            System.out.println(testName + " has passed!");
-        } else {
-            System.out.println(testName + " has failed!");
-            System.out.println("Expected " + expectedResult + " but was " + actualResult);
-        }
-    }
-
     public void testThree() {
         int[] array = { 1, 3, -7, 2, 8, 23, 21, 54, 4, 5 };
         ArrayService arrayService = new ArrayService();
         arrayService.printArray(array);
+        if (array != null) {
+            System.out.println("Test3 has passed!");
+        } else {
+            System.out.println("Test3 hasn't passed!");
+        }
     }
 
     public void testFour() {
@@ -67,8 +62,27 @@ public class ArrayServiceTest {
 
     public void testFive() {
         ArrayService arrayService = new ArrayService();
-        int[] array = {3, 4};
-        double av = arrayService.avg(array);
-        System.out.println(av);
+        int[] actualResult = {3, 4};
+        double actualResult2 = arrayService.avg(actualResult);
+        double expectedResult = 3.5;
+
+        checkDouble(actualResult2, expectedResult, "Test5");
+    }
+
+    public void checkDouble(double actualResult, double expectedResult, String testName) {
+        if (actualResult == expectedResult) {
+            System.out.println(testName + " has passed!");
+        } else {
+            System.out.println(testName + " has failed!");
+            System.out.println("Expected " + expectedResult + " but was " + actualResult);
+        }
+    }
+    public void check(int actualResult, int expectedResult, String testName) {
+        if (actualResult == expectedResult) {
+            System.out.println(testName + " has passed!");
+        } else {
+            System.out.println(testName + " has failed!");
+            System.out.println("Expected " + expectedResult + " but was " + actualResult);
+        }
     }
 }
