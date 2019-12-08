@@ -3,7 +3,6 @@ package lv.javaguru.demo.HomeWork.Lection9.UniqueWordVocabulary;
 public class UniqueWordVocabularyDemo {
     public static void main(String[] args) {
         UniqueWordVocabulary newWord = new UniqueWordVocabulary();
-        System.out.println(newWord);
 
         newWord.addWord("Apple");
         newWord.addWord("Mango");
@@ -13,7 +12,9 @@ public class UniqueWordVocabularyDemo {
         newWord.addWord(" ");
         newWord.addWord("");
 
+        System.out.println(" ");
         newWord.getWordsCount();
+        System.out.println(" ");
         newWord.printVocabulary();
     }
 }
