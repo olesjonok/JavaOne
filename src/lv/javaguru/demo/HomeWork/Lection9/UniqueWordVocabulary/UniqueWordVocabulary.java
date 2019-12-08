@@ -20,7 +20,7 @@ public class UniqueWordVocabulary {
     }
 
     public int getWordsCount() {
-        System.out.print("HashSet contains " + words.size() + " elements");
+        System.out.println("HashSet contains " + words.size() + " elements");
         return words.size();
     }
 
