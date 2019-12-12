@@ -6,29 +6,27 @@ import java.util.Objects;
 import java.util.Set;
 
 public class UniqueWordVocabulary {
-    Set<String> words = new HashSet<String>();
-    String word;
+    private Set<String> words = new HashSet<String>();
 
     public void addWord(String word) {
-        if (word == null || word.isEmpty() || word == " ") {
+        if (word.equals(null) || word.isEmpty() || word.equals(" ")) {
             System.out.println("Collection has empty value!!!!");
-            words.remove(word);
         } else {
-            this.word = word;
             words.add(word);
         }
     }
 
     public int getWordsCount() {
-        System.out.println("HashSet contains " + words.size() + " elements");
         return words.size();
     }
 
     public void printVocabulary() {
         System.out.println("words: ");
-        Iterator<String> i = words.iterator();                  // 1 variant
-        while (i.hasNext())
-            System.out.println(i.next());
+        System.out.println(words);
+
+//        Iterator<String> i = words.iterator();                  // 1 variant
+//        while (i.hasNext())
+ //           System.out.println(i.next());
 //        words.forEach((e) -> { System.out.println(e); });    // 2 variant
 //        for (String word : words) {                          // 3 variant
 //            System.out.println(word);
