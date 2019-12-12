@@ -13,7 +13,7 @@ public class UniqueWordVocabularyDemo {
         newWord.addWord("");
 
         System.out.println(" ");
-        newWord.getWordsCount();
+        ystem.out.println("HashSet contains " + newWord.getWordsCount() + " elements");
         System.out.println(" ");
         newWord.printVocabulary();
     }
