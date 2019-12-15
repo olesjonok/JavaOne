@@ -11,7 +11,7 @@ public class ArrayService {
     public void fillRandomly(int[] numbers) {
         Random randomGenerator = new Random();
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = randomGenerator.nextInt(100);
+            numbers[i] = randomGenerator.nextInt(101);
         }
     }
 
