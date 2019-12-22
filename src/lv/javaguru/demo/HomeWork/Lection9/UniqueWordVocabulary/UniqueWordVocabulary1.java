@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 
-public class UniqueWordVocabulary {
+public class UniqueWordVocabulary1 {
     private Set<String> words = new HashSet<String>();
 
     public void addWord(String word) {
@@ -26,18 +26,22 @@ public class UniqueWordVocabulary {
 
 //        Iterator<String> i = words.iterator();                  // 1 variant
 //        while (i.hasNext())
- //           System.out.println(i.next());
+        //           System.out.println(i.next());
 //        words.forEach((e) -> { System.out.println(e); });    // 2 variant
 //        for (String word : words) {                          // 3 variant
 //            System.out.println(word);
 //        }
+
+        Iterator<String> i = words.iterator();
+        while (i.hasNext())
+            System.out.println(i.next());
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        UniqueWordVocabulary that = (UniqueWordVocabulary) o;
+        UniqueWordVocabulary1 that = (UniqueWordVocabulary1) o;
         return Objects.equals(words, that.words);
     }
 
