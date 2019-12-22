@@ -1,12 +1,13 @@
 package lv.javaguru.demo.HomeWork.Tv;
 
+import java.util.Objects;
+
 public class Tv {
     private String manufacturer;
 
     private boolean powerOn;
     private int channel;
-    private int volume ;
-
+    private int volume;
 
 
     public Tv(String manufacturer, int volume, int channel) {
@@ -15,12 +16,15 @@ public class Tv {
         this.volume = volume;
         this.channel = channel;
     }
+
     public int getVolume() {
         return volume;
     }
+
     public int getChannel() {
         return channel;
     }
+
     public String getManufacturer() {
         return manufacturer;
     }
@@ -28,21 +32,38 @@ public class Tv {
     public void setChannel(int choosechannel) {
         channel = choosechannel;
     }
+
     public void increaseChannel() {
         channel = channel + 1;
     }
+
     public void decreaseChannel() {
         channel = channel - 1;
     }
+
     public void power() {
         powerOn = !powerOn;
     }
+
     public void increaseVolume() {
         volume = volume + 1;
     }
+
     public void decreaseVolume() {
         volume = volume - 1;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tv tv = (Tv) o;
+        return powerOn == tv.powerOn &&
+                channel == tv.channel &&
+                volume == tv.volume &&
+                Objects.equals(manufacturer, tv.manufacturer);
+    }
+
     @Override
     public String toString() {
         return "Tv{" +

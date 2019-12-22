@@ -2,7 +2,7 @@ package lv.javaguru.demo.HomeWork.Lection9.UniqueWordVocabulary;
 
 public class UniqueWordVocabularyDemo {
     public static void main(String[] args) {
-        UniqueWordVocabulary newWord = new UniqueWordVocabulary();
+        UniqueWordVocabulary1 newWord = new UniqueWordVocabulary1();
 
         newWord.addWord("Apple");
         newWord.addWord("Mango");

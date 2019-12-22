@@ -1,8 +1,5 @@
 package lv.javaguru.demo.HomeWork.Lection6.ArrayService;
 
-import java.sql.SQLOutput;
-import java.util.Arrays;
-
 public class ArrayServiceTest {
     public static void main(String[] args) {
         ArrayServiceTest arrayServiceTest = new ArrayServiceTest();
